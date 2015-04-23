@@ -52,7 +52,21 @@ struct IPC_DATA
 };
 
 /*! @brief list of images we require for processing; always use these indices
- * */
+ *
+enum IMG_TYPE
+{
+	SENSORIMG,
+ 	BACKGROUND,
+ 	THRESHOLD,
+ 	INDEX0,
+ 	INDEX1,
+ 	ADDINFO,//do not use this index for image processing as it is used for parsing the drawing info to cgi.c
+ 	MAX_NUM_IMG
+};
+*/
+
+
+
 enum IMG_TYPE
 {
 	SENSORIMG,
